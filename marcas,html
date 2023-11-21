@@ -17,7 +17,7 @@
     <h3 class="w3-wide"><center><img src="logo.png"></center></h3>
   </div>
   <div class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold">
-    <a href="marcas.html" class="w3-pink w3-button">Marcas</a>
+    <a href="marcas.html" class="w3-pink w3-button w3-bar-item">Marcas</a>
     <a onclick="myAccFunc()" href="javascript:void(0)" class="w3-button w3-bar-item w3-left-align" id="perfil">
       Perfil <i class="fa fa-caret-down"></i>
     </a>
