@@ -17,15 +17,6 @@
     <h3 class="w3-wide"><center><img src="imagens/logo.png"></center></h3>
   </div>
   <div class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold">
-    <a onclick="myAccFunc()" href="javascript:void(0)" class="w3-button w3-bar-item w3-left-align" id="myBtn">
-      Perfil <i class="fa fa-caret-down"></i>
-    </a>
-    <div id="demoAcc" class="w3-bar-block w3-hide w3-padding-large w3-medium">
-      <a href="fav.html" class="w3-bar-item w3-button w3-light-grey"><i class="fa fa-caret-right w3-margin-right"></i>Favoritos</a>
-      <a href="pedidos.html" class="w3-bar-item w3-button">Pedidos</a>
-      <a href="dp.html" class="w3-bar-item w3-button">Dados Pessoais</a>
-    </div>
-      <a href="marcas.html" class="w3-bar-item w3-button">Marcas</a>
       <a href="prim.html" class="w3-bar-item w3-button">Primers</a>
       <a href="bas.html" class="w3-bar-item w3-button">Bases</a>
       <a href="corret.html" class="w3-bar-item w3-button">Corretivos</a>
@@ -33,7 +24,7 @@
       <a href="sombra.html" class="w3-bar-item w3-button">Paletas de Sombra</a>
       <a href="sobran.html" class="w3-bar-item w3-button">Sobrancelha</a>
       <a href="delin.html" class="w3-bar-item w3-button">Delineadores</a>
-      <a href="masc.html" class="w3-bar-item w3-button">Mascára de Cílios</a>
+      <a href="masc.html" class="w3-bar-item w3-button">Máscara de Cílios</a>
       <a href="cilios.html" class="w3-bar-item w3-button">Cílios</a>
       <a href="cont.html" class="w3-bar-item w3-button">Contornos</a>
       <a href="bronz.html" class="w3-bar-item w3-button">Bronzers</a>
@@ -53,74 +44,84 @@
   <header class="w3-container w3-xlarge">
     <p class="w3-left">Mais Procurados</p>
     <p class="w3-right w3-wide">
-            <a href="carrinho.html"><i class="fa fa-shopping-cart w3-margin-right"></i></a>
-            <a href="pesquisar.html"><i class="fa fa-search"></i></a>
+            <a onclick="myAccFunc()" href="javascript:void(0)" id="myBtn"><i class="fa fa-shopping-cart w3-margin-right"></i></a>
+            <a href="perfil.html"><i class=" fa fa-user-o w3-margin-right"></i></a>
     </p>
   </header>
   <div class="w3-display-container w3-container">
     <div class="w3-display-topleft w3-text-white" style="padding:24px 48px">
     </div>
   </div>
+  <div id="demoAcc" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+    <aside id="cart">
+      <h4>Carrinho</h4>
+        <ul id="cart-items">
 
-  <div class="w3-container w3-text-grey" id="jeans">
+        </ul>
+        <h3>Total: R$<span id="cart-total">0.00</span></h3>
+        <button onclick="checkout()">Finalizar Compra</button>
+        <a href="" class="w3-right"><button>Formas de Pagamento</button></a>
+    </aside>
+  </div>
+  <div class="w3-container w3-text-grey">
     <p>8 items</p>
   </div>
 
   <!-- Product grid -->
-  <div class="w3-row">
+  <div class="w3-row" id="products">
     <div class="w3-col l3 s6">
-      <div class="w3-container">
+      <div class="w3-container" id="product">
         <img src="imagens/porosa.webp" style="width:100%">
-        <p>Pó Facial Solto Rosa Pink Powder By Karen Bachini<br><center><b>R$75.90</b></center></p>
-        <i src="gostar.png"></i><center><button onclick="addToCart(1)" class="w3-button w3-pink w3-margin-bottom price">Adicionar ao carrinho</button></center>
+        <p>Pó Facial Solto Rosa Pink Powder By Karen Bachini<br><center><p class="prince">R$75.90</p></center></p>
+        <center><button onclick="addToCart(1)" class="w3-button w3-pink w3-margin-bottom">Adicionar ao carrinho</button></center>
       </div>
-      <div class="w3-container">
+      <div class="w3-container" id="product">
         <img src="imagens/chocochilli.webp" style="width:100%">
-        <p>Gloss Labial Chocochilli Fran By Franciny Ehlke<br><center><b>R$58.00</b></center></p>
-        <center><button onclick="addToCart(2)" class="w3-button w3-pink w3-margin-bottom price">Adicionar ao carrinho</button></center>
+        <p>Gloss Labial Chocochilli Fran By Franciny Ehlke<br><center><b class="prince">R$58.00</b></center></p>
+        <center><button onclick="addToCart(2)" class="w3-button w3-pink w3-margin-bottom">Adicionar ao carrinho</button></center>
       </div>
     </div>
 
     <div class="w3-col l3 s6">
-      <div class="w3-container">
+      <div class="w3-container" id="product">
         <div class="w3-display-container">
           <img src="imagens/blushsg.webp" style="width:100%">
         </div>
-        <p>Blush Líquido Sheglam<br><center><b>R$30.50</b></center></p>
-        <center><button onclick="addToCart(3)" class="w3-button w3-pink w3-margin-bottom price">Adicionar ao carrinho</button></center>
+        <p>Blush Líquido Sheglam<br><center><b class="price">R$30.50</b></center></p>
+        <center><button onclick="addToCart(3)" class="w3-button w3-pink w3-margin-bottom">Adicionar ao carrinho</button></center>
       </div>
-      <div class="w3-container">
-        <img src="imagens/corretivonudesg.webp" style="width:100%">
-        <p>SHEGLAM Corretivo Nude Complexion Boost<br><center><b>R$25.50</b></center></p>
-        <center><button onclick="addToCart(4)" class="w3-button w3-pink w3-margin-bottom price">Adicionar ao carrinho</button></center>
+      <div class="w3-container" id="product">
+        <img src="imagens/corret.sg.jpg" style="width:100%">
+        <p>SHEGLAM Corretivo Nude Complexion Boost<br><center><b class="price">R$25.50</b></center></p>
+        <center><button onclick="addToCart(4)" class="w3-button w3-pink w3-margin-bottom">Adicionar ao carrinho</button></center>
       </div>
     </div>
 
     <div class="w3-col l3 s6">
-      <div class="w3-container">
-        <img src="/w3images/jeans3.jpg" style="width:100%">
-        <p>Washed Skinny Jeans<br><center><b>$20.50</b></center></p>
-        <center><button onclick="addToCart(5)" class="w3-button w3-pink w3-margin-bottom price">Adicionar ao carrinho</button></center>
+      <div class="w3-container" id="product">
+        <img src="imagens/glossd.bt.webp" style="width:100%">
+        <p>Gloss Bruna Tavares Celebration Disney<br><center><b class="price">R$59,99</b></center></p>
+        <center><button onclick="addToCart(5)" class="w3-button w3-pink w3-margin-bottom">Adicionar ao carrinho</button></center>
       </div>
-      <div class="w3-container">
+      <div class="w3-container" id="product">
         <div class="w3-display-container">
-          <img src="/imagens/jeans4.jpg" style="width:100%">
+          <img src="imagens/batom.av.webp" style="width:100%">
         </div>
-        <p>Vintage Skinny Jeans<br><center><b>R$30.50</b></center></p>
-        <center><button onclick="addToCart(6)" class="w3-button w3-pink w3-margin-bottom price">Adicionar ao carrinho</button></center>
+        <p>Batom Líquido Matte Glitter Effect Avon Power Stay<br><center><b class="price">R$39,99</b></center></p>
+        <center><button onclick="addToCart(6)" class="w3-button w3-pink w3-margin-bottom">Adicionar ao carrinho</button></center>
       </div>
     </div>
 
     <div class="w3-col l3 s6">
-      <div class="w3-container">
-        <img src="imagens/jeans4.jpg" style="width:100%">
-        <p>Vintage Skinny Jeans<br><center><b>$20.50</b></center></p>
-        <center><button onclick="addToCart(7)" class="w3-button w3-pink w3-margin-bottom price">Adicionar ao carrinho</button></center>
+      <div class="w3-container" id="product">
+        <img src="imagens/corret.mb.jpg" style="width:100%">
+        <p>Corretivo Líquido Maybelline Eraser Instant Age Rewind 120 Light, 5.9ml<br><center><b class="price">R$56,87</b></center></p>
+        <center><button onclick="addToCart(7)" class="w3-button w3-pink w3-margin-bottom">Adicionar ao carrinho</button></center>
       </div>
-      <div class="w3-container">
-        <img src="imagens/jeans1.jpg" style="width:100%">
-        <p>Ripped Skinny Jeans<br><center><b>$24.99</b></center></p>
-        <center><button onclick="addToCart(8)" class="w3-button w3-pink w3-margin-bottom price">Adicionar ao carrinho</button></center>
+      <div class="w3-container" id="product">
+        <img src="imagens/masc.bf.jpg" style="width:100%">
+        <p>Rímel 2 em 1, Preto, Bella Femme<br><center><b class="price">R$28,97</b></center></p>
+        <center><button onclick="addToCart(8)" class="w3-button w3-pink w3-margin-bottom">Adicionar ao carrinho</button></center>
       </div>
     </div>
   </div>
