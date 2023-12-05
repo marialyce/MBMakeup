@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>MBMakeUP-Login</title>
+    <link rel="stylesheet" type="text/css" href="perfil.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+ <div class="form-container aba ativa" id="Cadastro">
+    <h2>Login</h2>
+    
+    <form id="Login">
+
+      <div class="form-group">
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="senha">Senha:</label>
+        <input type="password" id="senha" name="senha" required>
+      </div>
+      <div class="form-group-ev">
+        <center><button type="submit" id="meuBotao">Enviar</button></center>
+      </div>
+        <br>
+        <a href="index.html"><i class="fa fa-chevron-left w3-black"></i></a>
+      </div>
+    </form>
+ </div>
+</body>
+<script>
+    document.getElementById("Login").addEventListener("submit", function(event) {
+  event.preventDefault(); // Previne o envio padrão do formulário
+
+  // Obtém os valores dos campos do formulário
+  var email = document.getElementById("email").value;
+  var senha = document.getElementById("senha").value;
+
+  // Exibe os valores obtidos do formulário no console
+  console.log("Email: " + email);
+  console.log("Senha: " + senha);
+  
+
+
+
+  document.getElementById("email").value = "";
+  document.getElementById("senha").value = "";
+  document.getElementById("meuBotao").addEventListener("click", function() {
+            // Exibindo um alerta quando o botão é clicado
+  alert("Login realizado com sucesso");
+  });
+});
+</script>
+</html>

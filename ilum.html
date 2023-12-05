@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>MBMakeUp-Iluminadores</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="imagens/maquiagem.png"/>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body class="w3-content" style="max-width:1200px">
+<nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="z-index:3;width:250px" id="mySidebar">
+  <div class="w3-container w3-display-container w3-padding-16">
+    <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
+    <h3 class="w3-wide"><center><a href="index.html"><img src="imagens/logo.png"></a></center></h3>
+  </div>
+  <div class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold">
+      <a href="prim.html" class="w3-bar-item w3-button">Primers</a>
+      <a href="bas.html" class="w3-bar-item w3-button">Bases</a>
+      <a href="corret.html" class="w3-bar-item w3-button">Corretivos</a>
+      <a href="pos.html" class="w3-bar-item w3-button">Pós</a>
+      <a href="sombra.html" class="w3-bar-item w3-button">Paletas de Sombra</a>
+      <a href="sobran.html" class="w3-bar-item w3-button">Sobrancelha</a>
+      <a href="delin.html" class="w3-bar-item w3-button">Delineadores</a>
+      <a href="masc.html" class="w3-bar-item w3-button">Máscara de Cílios</a>
+      <a href="cilios.html" class="w3-bar-item w3-button">Cílios</a>
+      <a href="cont.html" class="w3-bar-item w3-button">Contornos</a>
+      <a href="bronz.html" class="w3-bar-item w3-button">Bronzers</a>
+      <a href="bls.html" class="w3-bar-item w3-button">Blushes</a>
+      <a href="ilum.html" class="w3-bar-item w3-button w3-pink">Iluminadores</a>
+      <a href="bruma.html" class="w3-bar-item w3-button">Brumas</a>
+      <a href="pinceis.html" class="w3-bar-item w3-button">Pincéis</a>
+  </div>  
+</nav>
+<header class="w3-bar w3-top w3-hide-large w3-black w3-xlarge">
+  <div class="w3-bar-item w3-padding-24 w3-wide">LOGO</div>
+  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-24 w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+</header>
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+<div class="w3-main" style="margin-left:250px">
+  <div class="w3-hide-large" style="margin-top:83px"></div>
+  <header class="w3-container w3-xlarge">
+    <p class="w3-left">Iluminadores</p>
+    <p class="w3-right w3-wide">
+            <a onclick="myAccFunc()" href="javascript:void(0)" id="myBtn"><i class="fa fa-shopping-cart w3-margin-right"></i></a>
+            <a href="perfil.html"><i class=" fa fa-user-o w3-margin-right"></i></a>
+    </p>
+  </header>
+  <div class="w3-display-container w3-container">
+    <div class="w3-display-topleft w3-text-white" style="padding:24px 48px">
+    </div>
+  </div>
+  <div id="demoAcc" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+    <aside id="cart">
+      <h4>Carrinho</h4>
+        <ul id="cart-items">
+
+        </ul>
+        <h3>Total: R$<span id="cart-total">0.00</span></h3>
+        <button onclick="checkout()">Finalizar Compra</button>
+        <a href="" class="w3-right"><button>Formas de Pagamento</button></a>
+    </aside>
+  </div>
+  <div class="w3-container w3-text-grey">
+  </div>
+
+  <!-- Product grid -->
+    <div class="w3-row" id="products">
+    <div class="w3-col l3 s6">
+      <div class="w3-container" id="product">
+        <img src="imagens/il.bt.webp" style="width:100%">
+        <p>Bt Light Champagne, Bruna Tavares<center><b class="prince">R$38,24</b></center></p>
+        <center><button onclick="addToCart(40)" class="w3-button w3-pink w3-margin-bottom">Adicionar ao carrinho</button></center>
+      </div>
+      <div class="w3-container">
+      </div>
+    </div>
+
+    <div class="w3-col l3 s6">
+      <div class="w3-container" id="product">
+        <div class="w3-display-container">
+          <img src="imagens/il.oc.webp" style="width:100%">
+          <div class="w3-display-middle w3-display-hover">
+          </div>
+        </div>
+        <p>Iluminador, Just Glow Bouquet, Rosa, Mariana Saad, Océane, Océane, Rosa<br><center><b class="prince">R$75,99</b></center></p>
+        <center><button onclick="addToCart(41)" class="w3-button w3-pink w3-margin-bottom">Adicionar ao carrinho</button></center>
+      </div>
+      <div class="w3-container">
+      </div>
+    </div>
+
+    <div class="w3-col l3 s6">
+      <div class="w3-container">
+      </div>
+      <div class="w3-container">
+        <div class="w3-display-container">
+          <div class="w3-display-middle w3-display-hover">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-col l3 s6">
+      <div class="w3-container">
+      </div>
+      <div class="w3-container">
+      </div>
+    </div>
+  </div>
+
+  <div class="w3-container w3-black w3-padding-32">
+    <h1>Cadastre-se para assinar nossa glambox!🤍</h1>
+    <p><input class="w3-input w3-border" type="text" placeholder="Nome" style="width:100%"></p>
+    <p><input class="w3-input w3-border" type="e-mail" placeholder="E-mail" style="width:100%"></p>
+    <button type="button" class="w3-button w3-pink w3-margin-bottom">Realizar Cadastro</button>
+  </div>
+  <footer class="w3-padding-64 w3-light-grey w3-small w3-center" id="footer">
+    <div class="w3-row-padding">
+      <div class="w3-col s4">
+        <h4>Contato</h4>
+        <p>Dificuldades? Resolveremos seus problemas!</p>
+        <form action="/action_page.php" target="_blank">
+          <p><input class="w3-input w3-border" type="text" placeholder="Nome" name="nome" required></p>
+          <p><input class="w3-input w3-border" type="text" placeholder="E-mail" name="email" required></p>
+          <p><input class="w3-input w3-border" type="text" placeholder="Problema" name="duvida" required></p>
+          <p><input class="w3-input w3-border" type="text" placeholder="Mensagem" name="mensagem" required></p>
+          <button type="submit" class="w3-button w3-block w3-pink">Enviar</button>
+        </form>
+      </div>
+      <div class="w3-col s4">
+        <h4>Sobre</h4>
+        <p><a href="#">Nós</a></p>
+        <p><a href="#">Suporte</a></p>
+      </div>
+      <div class="w3-col s4 w3-justify">
+        <h4>MBMakeUp</h4>
+        <p><i class="fa fa-fw fa-map-marker"></i> Site On-line</p>
+        <p><i class="fa fa-fw fa-phone"></i> (89) 99401-0203</p>
+        <p><i class="fa fa-fw fa-envelope"></i> mbmakeup@contato.com</p>
+        <h4>Nós aceitamos: </h4>
+        <p><i class="fa fa-fw fa-cc-amex"></i> Pix</p>
+        <p><i class="fa fa-fw fa-credit-card"></i> Cartão de Crédito</p>
+        <p><i class="fa fa-fw fa-barcode"></i> Boleto</p>
+        <br>
+        <i class="fa fa-facebook-official w3-hover-opacity w3-large"></i>
+        <i class="fa fa-instagram w3-hover-opacity w3-large"></i>
+        <i class="fa fa-snapchat w3-hover-opacity w3-large"></i>
+        <i class="fa fa-pinterest-p w3-hover-opacity w3-large"></i>
+        <i class="fa fa-twitter w3-hover-opacity w3-large"></i>
+        <i class="fa fa-linkedin w3-hover-opacity w3-large"></i>
+      </div>
+    </div>
+  </footer>
+<div class="w3-black w3-center w3-padding-24"> <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity"></a></div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>

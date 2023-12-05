@@ -1,0 +1,78 @@
+/*.form {
+
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.label, input, button {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.button {
+  padding: 10px;
+}*/
+    .form-container {
+      width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #f2f2f2;
+      border-radius: 5px;
+      margin-top: 30px;
+    }
+
+    .form-container h2 {
+      text-align: center;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+      margin-right: 15px;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      align-items: center;
+    }
+
+    .form-group button {
+      width: 100%;
+      padding: 10px 20px;
+      background-color: lightpink;
+      color: #fff;
+      border-radius: 5px;
+      border: none;
+      cursor: pointer;
+      align-items: center;
+      margin-bottom:16px;
+    }
+    .form-group-ev button {
+      width: 100%;
+      padding: 10px 20px;
+      background-color: lightpink;
+      color: #fff;
+      border-radius: 5px;
+      border: none;
+      cursor: pointer;
+      align-items: center;
+      margin-bottom:16px;
+    }
+    .w3-black,.w3-hover-black:hover{color:#000!important}
+    .aba {
+      display: none;
+    }
+
+    .aba.ativa {
+    display: block;
+    }
